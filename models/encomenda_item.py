@@ -10,6 +10,7 @@ class EncomendaItem(models.Model):
     desconto = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     taxa_iva = models.DecimalField(max_digits=5, decimal_places=2)
     total_linha = models.DecimalField(max_digits=10, decimal_places=2)
+    usuario_id = models.UUIDField(null=True, blank=True)  # ID do usuário que criou a encomenda
 
     def __str__(self):
         return f"Item {self.id} - Encomenda {self.encomenda_id} - Produto {self.produto_id}"

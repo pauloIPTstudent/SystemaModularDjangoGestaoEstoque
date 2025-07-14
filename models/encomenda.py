@@ -14,7 +14,7 @@ class Encomenda(models.Model):
     total_bruto = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     total_desconto = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     total_liquido = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-    obeservacoes = models.TextField(blank=True, null=True)
+    observacoes = models.TextField(blank=True, null=True)
     usuario_id = models.UUIDField(null=True, blank=True)  # ID do usuário que criou a encomenda
     
     def __str__(self):
